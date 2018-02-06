@@ -5,12 +5,14 @@ from test_scrapy_urls.items import MyQuotes
 
 # Imports the Google Cloud client library
 from google.cloud import storage
+import os
 
 
 class QuotesUrlSpider(scrapy.Spider):
     name = 'urlsgcs'
     bucket_name = 'ronalbucket'
     file_name = 'quotes_urls.txt'
+    os.environ["GOOGLE_APPLICATION_CREDENTIALS"] = "service-account-file.json"
 
     def __init__(self):
         # Instantiates a client
