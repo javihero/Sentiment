@@ -14,6 +14,10 @@ BOT_NAME = 'test_scrapy_urls'
 SPIDER_MODULES = ['test_scrapy_urls.spiders']
 NEWSPIDER_MODULE = 'test_scrapy_urls.spiders'
 
+FEED_EXPORT_ENCODING = 'utf-8'
+FEED_FORMAT = 'jl'
+FEED_URI = 'result.jl'
+
 
 # Crawl responsibly by identifying yourself (and your website) on the user-agent
 #USER_AGENT = 'test_scrapy_urls (+http://www.yourdomain.com)'
